@@ -11,7 +11,9 @@ s3 = boto3.resource(service_name="s3",
                     aws_secret_access_key=s3_secret
                     )
 for item in s3.Bucket(name='otter-gallery').objects.all():
-    path = f"content/{item.key}"
+    if not f"{item.key}".startswith("content"):
+        continue
+    path = f"{item.key}"
     s3_file = item.get()["Body"]
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with io.FileIO(path, "w") as local_file:
