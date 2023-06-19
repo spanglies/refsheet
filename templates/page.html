@@ -54,7 +54,7 @@
           {% set image_unclothed = resize_image(path=page.path ~ "refsheet_unclothed.png", height=2048, width=2048, op="fit") %}
           <img class="hidden" width="{{ image_unclothed.width }}" height="{{ image_unclothed.height }}" id="ref-sheet-unclothed" src="{{ image_unclothed.url }}" data-zoom-src="refsheet_unclothed.png" data-zoomable/>
         {% endif %}
-        <div id="ref-control" class="cursor-pointer border-2 border-purple-500 {% if page.extra.clothed_refsheet %}{% else %}hidden{% endif %} opacity-60 hover:opacity-100 transition-all absolute top-2 right-2 min-w-[150px] bg-purple-900 rounded-lg text-white select-none" style="padding: 4px;">
+        <div id="ref-control" class="cursor-pointer border-2 border-purple-500 {% if page.extra.clothed_refsheet %}{% else %}hidden{% endif %} opacity-60 hover:opacity-100 transition-all absolute top-2 right-2 min-w-[200px] bg-purple-900 rounded-lg text-white select-none" style="padding: 4px;">
           <div class="relative flex items-center">
             <div id="clothed-ref-slider" class="absolute left-0 inset-y-0 w-1/2 flex bg-white dark:bg-purple-600 transition-all ease-in-out duration-200 transform rounded-md shadow translate-x-0"></div>
             <div class="relative flex-1 flex text-sm font-semibold capitalize items-center justify-center m-px p-px">Clothed</div>
