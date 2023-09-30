@@ -40,9 +40,9 @@ The only type of swimwear he considers wearing is a pair of jammers
 
 {% card(title="Eyes 👀") %}
 
-Spencer has the most common form of heterocromia!
+Spencer has one of the more common forms of heterocromia!
 but it's completely optional to include. His eyes are primarily gray and if desired, can include a green accent.
-If your going to include the accent, it should be as either an inner circle, or the top inner quadrant of each eye
+If your going to include the accent, it should be as either an inner circle, or the top inner quarter of each eye
 {% end %}
 
 {{ gallery(path="content/otter/config.toml") }}
