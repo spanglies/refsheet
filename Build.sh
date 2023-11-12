@@ -11,6 +11,5 @@ fi
 cat config.base.toml >> config.toml
 yarn build
 python uploadZip.py
-cp -r public publish
+rm -r public/zips
 rm config.toml
-rm -r publish/public/zips
