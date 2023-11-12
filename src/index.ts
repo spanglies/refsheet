@@ -272,9 +272,10 @@ function unhideNSFW() {
 
     // Get the value of the nsfw parameter
     const nsfw = urlParams.get('nsfw');
+    const sheet = urlParams.get('sheet');
 
     // If the nsfw parameter is true, unhide all elements with the class "nsfw"
-    if (nsfw) {
+    if (nsfw && !["no", "false"].includes(nsfw.toLowerCase())) {
         // get all <a> tags with the class "card-link"
         const characters = document.querySelectorAll<HTMLLinkElement>(".card-link");
         characters.forEach((element) => {
@@ -307,6 +308,9 @@ function unhideNSFW() {
             }
             element.style.display = "block";
         }
+    }
+    if (sheet && (["nsfw","unclothed","nude","naked","secondary","2"].includes(sheet.toLowerCase()) )){
+        toggleRef()
     }
 }
 
@@ -388,10 +392,7 @@ function renderBlurhashes() {
     }
 }
 
-function attachRefToggleSwitch() {
-    const refToggle = document.getElementById("ref-control") as HTMLElement;
-    if (refToggle) {
-        refToggle.addEventListener("click", () => {
+function toggleRef(){
             const refSheet = document.getElementById("ref-sheet") as HTMLElement;
             const nsfwRefSheet = document.getElementById("ref-sheet-nsfw") as HTMLElement;
             const unclothedRefSheet = document.getElementById("ref-sheet-unclothed") as HTMLElement;
@@ -442,7 +443,12 @@ function attachRefToggleSwitch() {
 
             }
             console.log(slider.style.transform);
-        });
+        }
+
+function attachRefToggleSwitch() {
+    const refToggle = document.getElementById("ref-control") as HTMLElement;
+    if (refToggle) {
+        refToggle.addEventListener("click", toggleRef);
     }
 }
 

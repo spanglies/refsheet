@@ -13,4 +13,4 @@ yarn build
 python uploadZip.py
 cp -r public publish
 rm config.toml
-rm -r publish/zips
+rm -r publish/public/zips

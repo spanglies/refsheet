@@ -19,4 +19,7 @@ def main():
 
 
 if os.getenv("CF_PAGES_BRANCH") == "master":
+    print("uploading zips of references")
     main()
+else:
+    print("Skipping zip uploading references")
