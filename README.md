@@ -11,7 +11,7 @@ It is built on top of [Zola](https://www.getzola.org), [Vite](https://vitejs.dev
 python and nodejs.
 It is arguably overengineered. It is meant to serve my own purposes and if other people find use out of it that's just a nice bonus.
 
-With much of the bash scripts 
+I've also added boto3 support to download static references that shouldn't be stored in a git repo like this via python scripts
 ### Features
 - Automatic color pallete indicator buttons that highlight parts of ref sheets
 - Fully responsive and automatic mosiac card layout
@@ -25,11 +25,13 @@ With much of the bash scripts
 are stored on R2 due to size limitation on cloudflare pages
 ## Usage
 !! 
+
 Prerequisites: Yarn 1.22, NodeJS (tested with nodejs 18 and 20), npm, python 3.11 
 
 Running on windows will likely need WSL or at the very least git bash
 
 This repo is specifically tested on Manjaro Linux and Cloudflare's Ubunutu based Pages agents on platform 2.0
+
 !!
 ```bash
 # Install necessary dependencies
