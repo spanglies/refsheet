@@ -34,7 +34,7 @@
     "tailwind:serve": "npx tailwindcss -i src/tailwind.css -o static/style.css --watch",
     "zola:build": "zola-bin build",
     "vite:build": "vite build",
-    "zips:build": "./generate_zips.sh"
+    "zips:build": "python Generate_Zips.py"
   },
   "dependencies": {
     "@google/model-viewer": "^2.1.1",
