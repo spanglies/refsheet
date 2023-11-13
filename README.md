@@ -20,7 +20,7 @@ I've also added boto3 support to download static references that shouldn't be st
 - Automatically resizes images for smaller filesizes
 - NSFW content toggle, can be hidden behind URL parameters
 - Refsheet toggle between two (or more) Reference sheet versions, Can default to a secondary sheet with URL parameter.
-  - sheet=nude or sheet=nsfw or sheet=secondary all work for this. 
+  - sheet=nude, sheet=nsfw, sheet=secondary, and sheet=2 all work for this. 
 - This repo is set up to be used with Cloudflare's Pages framework and R2 (which is an amazon S3 compatible storage system). Zip files
 are stored on R2 due to size limitation on cloudflare pages
 ## Usage
