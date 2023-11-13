@@ -8,7 +8,7 @@ def main():
     s3_token = os.getenv("CLOUDFLARE_S3_token_id")
     s3_secret = os.getenv("cloudflare_s3_token_secret")
     account_id = os.getenv("CLOUDFLARE_ACCOUNT_ID")
-    bucket_id = os.getenv("s3.bucket_id")
+    bucket_id = os.getenv("s3_bucket_id")
     s3 = boto3.resource(service_name="s3",
                         endpoint_url=f"https://{account_id}.r2.cloudflarestorage.com/",
                         aws_access_key_id=s3_token,
